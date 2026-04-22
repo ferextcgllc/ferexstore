@@ -1,4 +1,4 @@
-import { ShieldCheck, Truck, BadgeDollarSign, Instagram, ChevronRight, Star, CheckCircle2, Package, FileText, Camera, CreditCard } from "lucide-react";
+import { ShieldCheck, Truck, BadgeDollarSign, Instagram, ChevronRight, Star, CheckCircle2, Package, FileText, Camera, CreditCard, Sparkles, Gem, ArrowUpRight, Clock3 } from "lucide-react";
 
 const rates = {
   singles: [
@@ -34,20 +34,27 @@ const faqs = [
   },
 ];
 
-export default function FerexTCGModernCardShopSite() {
-  return (
-    <div className="min-h-screen bg-[#0a0a0b] text-white">
-      <div className="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(245,158,11,0.12),transparent_30%),radial-gradient(circle_at_top_right,rgba(59,130,246,0.10),transparent_28%),linear-gradient(to_bottom,#0a0a0b,#0f1013)]" />
+const recentDeals = [
+  { title: "High-end singles lot", value: "$1,240", note: "Reviewed, confirmed, paid after inspection" },
+  { title: "Fusion World slab deal", value: "$780", note: "Tracked shipment and clean payout flow" },
+  { title: "Masters slab submission", value: "$310", note: "Fast inspection and same-window payment" },
+];
 
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0a0a0b]/85 backdrop-blur-xl">
+export default function FerexTCGEliteCardShopSite() {
+  return (
+    <div className="min-h-screen bg-[#09090b] text-white selection:bg-amber-300 selection:text-black">
+      <div className="fixed inset-0 -z-20 bg-[radial-gradient(circle_at_top_left,rgba(245,158,11,0.14),transparent_26%),radial-gradient(circle_at_top_right,rgba(59,130,246,0.10),transparent_22%),linear-gradient(to_bottom,#09090b,#0e1014_42%,#0a0b0d)]" />
+      <div className="fixed inset-0 -z-10 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:34px_34px] opacity-[0.08]" />
+
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#09090b]/80 backdrop-blur-2xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-2xl border border-amber-400/30 bg-amber-400/10 text-sm font-semibold text-amber-300">
-              F
+            <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-2xl border border-amber-300/20 bg-white/5 shadow-[0_0_0_1px_rgba(255,255,255,0.02)]">
+              <img src="logo.png" alt="FerexTCG logo" className="h-8 w-auto object-contain" />
             </div>
             <div>
               <div className="text-lg font-semibold tracking-tight">FerexTCG</div>
-              <div className="text-xs text-zinc-400">Dragon Ball Fusion World Buylist</div>
+              <div className="text-xs text-zinc-500">Modern card shop buylist intake</div>
             </div>
           </div>
 
@@ -55,12 +62,13 @@ export default function FerexTCGModernCardShopSite() {
             <a href="#rates" className="transition hover:text-white">Rates</a>
             <a href="#process" className="transition hover:text-white">How it works</a>
             <a href="#intake" className="transition hover:text-white">Intake</a>
+            <a href="#proof" className="transition hover:text-white">Recent deals</a>
             <a href="#faq" className="transition hover:text-white">FAQ</a>
           </nav>
 
           <a
             href="#intake"
-            className="rounded-2xl bg-white px-4 py-2 text-sm font-medium text-black transition hover:bg-zinc-200"
+            className="rounded-2xl bg-gradient-to-r from-amber-300 to-amber-400 px-4 py-2.5 text-sm font-semibold text-black shadow-lg shadow-amber-500/10 transition hover:brightness-105"
           >
             Start Intake
           </a>
@@ -68,34 +76,35 @@ export default function FerexTCGModernCardShopSite() {
       </header>
 
       <main>
-        <section className="mx-auto grid max-w-7xl gap-10 px-6 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
+        <section className="mx-auto grid max-w-7xl gap-10 px-6 pb-12 pt-16 xl:grid-cols-[1.05fr_0.95fr] xl:pt-24">
           <div className="flex flex-col justify-center">
-            <div className="inline-flex w-fit rounded-full border border-white/12 bg-white/5 px-3 py-1 text-xs font-medium uppercase tracking-[0.22em] text-zinc-300">
-              Modern Card Shop Intake
+            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.24em] text-zinc-300">
+              <Sparkles className="h-3.5 w-3.5 text-amber-300" />
+              Elite card shop intake
             </div>
 
-            <h1 className="mt-6 max-w-4xl text-5xl font-semibold leading-tight tracking-tight lg:text-7xl">
-              A cleaner way for customers to
-              <span className="block bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
-                submit cards and close deals.
+            <h1 className="mt-6 max-w-4xl text-5xl font-semibold leading-[1.02] tracking-tight lg:text-7xl">
+              A premium intake site that feels built for
+              <span className="mt-2 block bg-gradient-to-r from-white via-zinc-100 to-zinc-500 bg-clip-text text-transparent">
+                serious card deals.
               </span>
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
-              Professional intake flow for singles, slabs, and masters with transparent rates, seller acknowledgment, shipping instructions, and a polished storefront feel.
+              Cleaner customer flow, stronger trust cues, and a modern storefront style that makes submissions feel easier, more legitimate, and more appealing from the first click.
             </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#intake"
-                className="inline-flex items-center justify-center rounded-2xl bg-amber-400 px-6 py-4 text-sm font-semibold text-black transition hover:bg-amber-300"
+                className="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-amber-300 to-amber-400 px-6 py-4 text-sm font-semibold text-black shadow-xl shadow-amber-500/10 transition hover:translate-y-[-1px] hover:brightness-105"
               >
                 Submit Intake
                 <ChevronRight className="ml-2 h-4 w-4" />
               </a>
               <a
                 href="#rates"
-                className="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-sm font-medium text-white transition hover:bg-white/10"
+                className="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] px-6 py-4 text-sm font-medium text-white transition hover:bg-white/[0.08]"
               >
                 View Rates
               </a>
@@ -106,25 +115,54 @@ export default function FerexTCGModernCardShopSite() {
               <Badge text="Shipping covered up to $15" />
               <Badge text="Paid within 2 business days" />
             </div>
+
+            <div className="mt-10 grid gap-4 sm:grid-cols-3">
+              <MetricCard label="Submission flow" value="Clean" sub="Designed to convert" />
+              <MetricCard label="Store feel" value="Premium" sub="Modern card shop look" />
+              <MetricCard label="Customer trust" value="Higher" sub="Professional terms + structure" />
+            </div>
           </div>
 
           <div className="grid gap-5">
-            <div className="overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-zinc-900 to-zinc-950 shadow-2xl shadow-black/30">
-              <div className="grid min-h-[420px] lg:grid-cols-[1.1fr_0.9fr]">
-                <div className="flex flex-col justify-between border-b border-white/10 p-7 lg:border-b-0 lg:border-r">
-                  <div>
-                    <div className="text-xs uppercase tracking-[0.24em] text-zinc-500">Featured Buylist</div>
-                    <div className="mt-4 text-3xl font-semibold leading-tight">Built to feel like a real storefront, not a form dump.</div>
-                    <p className="mt-4 max-w-md text-sm leading-7 text-zinc-400">
-                      Clean structure, premium spacing, and a smoother customer path from first visit to deal confirmation.
-                    </p>
+            <div className="relative overflow-hidden rounded-[34px] border border-white/10 bg-gradient-to-br from-zinc-900 to-black shadow-2xl shadow-black/40">
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent" />
+              <div className="grid min-h-[500px] xl:grid-cols-[1.06fr_0.94fr]">
+                <div className="border-b border-white/10 p-7 xl:border-b-0 xl:border-r">
+                  <div className="flex items-center gap-3">
+                    <div className="rounded-2xl border border-amber-300/20 bg-amber-300/10 p-3">
+                      <Gem className="h-5 w-5 text-amber-300" />
+                    </div>
+                    <div>
+                      <div className="text-xs uppercase tracking-[0.22em] text-zinc-500">Featured layout</div>
+                      <div className="mt-1 text-xl font-semibold">Storefront feel, not a basic form page</div>
+                    </div>
                   </div>
 
+                  <p className="mt-5 max-w-md text-sm leading-7 text-zinc-400">
+                    Premium spacing, subtle depth, and a smoother deal path built around real customer questions and seller concerns.
+                  </p>
+
                   <div className="mt-8 grid grid-cols-2 gap-3">
-                    <StoreCard title="Fast intake" subtitle="Simple submission flow" />
-                    <StoreCard title="Clear terms" subtitle="Less back and forth" />
-                    <StoreCard title="Seller trust" subtitle="Professional feel" />
-                    <StoreCard title="Deal-ready" subtitle="Modern card shop vibe" />
+                    <GlassPill title="Fast intake" subtitle="Less friction" />
+                    <GlassPill title="Clear terms" subtitle="More trust" />
+                    <GlassPill title="Visual polish" subtitle="More legit" />
+                    <GlassPill title="Deal-ready" subtitle="Built to convert" />
+                  </div>
+
+                  <div className="mt-8 rounded-3xl border border-white/10 bg-white/[0.03] p-5">
+                    <div className="flex items-center justify-between gap-4">
+                      <div>
+                        <div className="text-xs uppercase tracking-[0.22em] text-zinc-500">Seller terms</div>
+                        <div className="mt-2 text-lg font-semibold">Keep expectations clear upfront</div>
+                      </div>
+                      <ShieldCheck className="h-5 w-5 text-zinc-300" />
+                    </div>
+                    <div className="mt-4 space-y-3 text-sm leading-6 text-zinc-400">
+                      <div>Cards are sent first for quality inspection.</div>
+                      <div>Singles must be $20+ in market value.</div>
+                      <div>Final payout may change after inspection.</div>
+                      <div>All sales are final once payment is sent.</div>
+                    </div>
                   </div>
                 </div>
 
@@ -137,13 +175,13 @@ export default function FerexTCGModernCardShopSite() {
                       <Star className="h-4 w-4 fill-amber-300" />
                       <Star className="h-4 w-4 fill-amber-300" />
                     </div>
-                    <div className="mt-4 text-xl font-medium leading-8 text-white">
-                      “The layout feels way more legit and makes the whole process easier to trust.”
+                    <div className="mt-5 text-2xl font-medium leading-9 text-white">
+                      “This feels like a real high-end card shop website instead of a quick reseller page.”
                     </div>
                   </div>
 
-                  <div className="mt-10 space-y-4">
-                    <MiniStat label="Contact" value="@ferextcg" />
+                  <div className="mt-10 grid gap-3">
+                    <MiniStat label="Instagram" value="@ferextcg" />
                     <MiniStat label="Shipping" value="Up to $15 reimbursed" />
                     <MiniStat label="Payment" value="Up to 2 business days" />
                   </div>
@@ -166,7 +204,7 @@ export default function FerexTCGModernCardShopSite() {
           id="rates"
           eyebrow="Rates"
           title="Current Dragon Ball Fusion World Rates"
-          subtitle="Clear, readable, and organized to help customers understand your buylist at a glance."
+          subtitle="Organized like a premium buylist so customers can scan quickly and feel confident about your payout structure."
         >
           <div className="grid gap-6 lg:grid-cols-3">
             <RateCard title="Singles" subtitle="Singles accepted at $20+ only" rows={rates.singles} />
@@ -179,11 +217,11 @@ export default function FerexTCGModernCardShopSite() {
           id="process"
           eyebrow="Process"
           title="How the deal works"
-          subtitle="Designed to feel simple for the customer while still protecting your business."
+          subtitle="The process is framed to feel smooth for customers while still protecting your side of the transaction."
         >
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-            <ProcessCard icon={FileText} title="1. Submit intake" text="Customer sends their list, notes, and photos through one clean form." />
-            <ProcessCard icon={Camera} title="2. Review cards" text="You review the submission, confirm the deal, and answer any questions." />
+            <ProcessCard icon={FileText} title="1. Submit intake" text="Customer sends their list, notes, and photos through one polished form." />
+            <ProcessCard icon={Camera} title="2. Review cards" text="You review the submission, confirm the deal, and clarify any needed details." />
             <ProcessCard icon={Package} title="3. Ship securely" text="Customer ships first with tracking. Shipping is reimbursed up to $15." />
             <ProcessCard icon={CreditCard} title="4. Get paid" text="Payment is sent within up to 2 business days after inspection." />
           </div>
@@ -193,18 +231,18 @@ export default function FerexTCGModernCardShopSite() {
           id="intake"
           eyebrow="Intake"
           title="Submit your cards"
-          subtitle="Cleaner structure, fewer distractions, and a more premium customer experience."
+          subtitle="This version is more user-friendly, cleaner to scan, and more appealing for higher-end card submissions."
         >
           <div className="grid gap-6 xl:grid-cols-[1.05fr_0.95fr]">
-            <div className="rounded-[32px] border border-white/10 bg-zinc-950/90 p-6 shadow-2xl shadow-black/20 md:p-8">
+            <div className="rounded-[34px] border border-white/10 bg-zinc-950/90 p-6 shadow-2xl shadow-black/20 md:p-8">
               <div className="mb-8 flex flex-col gap-4 border-b border-white/10 pb-6 md:flex-row md:items-start md:justify-between">
                 <div>
                   <h3 className="text-2xl font-semibold">Customer Intake Form</h3>
                   <p className="mt-2 max-w-xl text-sm leading-7 text-zinc-400">
-                    This layout keeps everything easy to follow while still looking premium and trustworthy.
+                    Structured like a premium card shop submission page with the right amount of detail and less visual clutter.
                   </p>
                 </div>
-                <div className="rounded-full border border-amber-400/20 bg-amber-400/10 px-3 py-1 text-xs font-medium text-amber-300">
+                <div className="rounded-full border border-amber-300/20 bg-amber-300/10 px-3 py-1 text-xs font-medium text-amber-300">
                   Faster reply: @ferextcg
                 </div>
               </div>
@@ -222,7 +260,7 @@ export default function FerexTCGModernCardShopSite() {
                       <button
                         key={item}
                         type="button"
-                        className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-4 text-sm text-zinc-300 transition hover:border-white/20 hover:bg-white/[0.07] hover:text-white"
+                        className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-4 text-sm text-zinc-300 transition hover:border-amber-300/30 hover:bg-white/[0.07] hover:text-white"
                       >
                         {item}
                       </button>
@@ -260,7 +298,10 @@ export default function FerexTCGModernCardShopSite() {
                 </div>
 
                 <div className="md:col-span-2 rounded-3xl border border-white/10 bg-white/[0.03] p-5">
-                  <div className="text-sm font-medium text-white">Seller acknowledgment</div>
+                  <div className="flex items-center justify-between gap-4">
+                    <div className="text-sm font-medium text-white">Seller acknowledgment</div>
+                    <div className="text-xs uppercase tracking-[0.22em] text-zinc-500">Required</div>
+                  </div>
                   <div className="mt-4 space-y-3 text-sm leading-6 text-zinc-400">
                     <Check text="I understand I must send cards first for quality inspection with tracking." />
                     <Check text="I acknowledge all singles submitted are $20+ in market value." />
@@ -275,7 +316,7 @@ export default function FerexTCGModernCardShopSite() {
                 <div className="md:col-span-2 flex flex-col gap-3 sm:flex-row">
                   <button
                     type="button"
-                    className="rounded-2xl bg-white px-5 py-3.5 text-sm font-semibold text-black transition hover:bg-zinc-200"
+                    className="rounded-2xl bg-gradient-to-r from-amber-300 to-amber-400 px-5 py-3.5 text-sm font-semibold text-black shadow-xl shadow-amber-500/10 transition hover:brightness-105"
                   >
                     Submit Intake
                   </button>
@@ -292,7 +333,7 @@ export default function FerexTCGModernCardShopSite() {
             <div className="grid gap-6">
               <FeaturePanel
                 title="Trust & Protection"
-                text="Clear terms, shipping rules, and payment timing make the deal feel organized and professional."
+                text="Clear terms, shipping rules, and payment timing make the site feel organized, safer, and more credible."
               />
               <FeaturePanel
                 title="Shipping Details"
@@ -302,7 +343,7 @@ export default function FerexTCGModernCardShopSite() {
                 title="Payout Timing"
                 text="After inspection is complete, payment is issued within up to 2 business days."
               />
-              <div className="rounded-[32px] border border-amber-400/20 bg-gradient-to-br from-amber-400/10 to-zinc-950 p-6">
+              <div className="rounded-[34px] border border-amber-300/20 bg-gradient-to-br from-amber-300/10 via-white/[0.02] to-zinc-950 p-6">
                 <div className="flex items-center gap-3">
                   <div className="rounded-2xl bg-white/10 p-3">
                     <Instagram className="h-5 w-5 text-white" />
@@ -319,28 +360,80 @@ export default function FerexTCGModernCardShopSite() {
         </Section>
 
         <Section
+          id="proof"
+          eyebrow="Recent Deals"
+          title="Add proof that feels real"
+          subtitle="A stronger card shop site shows activity, volume, and professionalism. These are placeholders you can replace with actual deals or vouches."
+        >
+          <div className="grid gap-5 lg:grid-cols-3">
+            {recentDeals.map((deal) => (
+              <div key={deal.title} className="rounded-[30px] border border-white/10 bg-white/[0.03] p-6">
+                <div className="flex items-center justify-between gap-4">
+                  <div className="text-lg font-semibold">{deal.title}</div>
+                  <ArrowUpRight className="h-5 w-5 text-zinc-500" />
+                </div>
+                <div className="mt-5 text-3xl font-semibold text-white">{deal.value}</div>
+                <p className="mt-3 text-sm leading-7 text-zinc-400">{deal.note}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        <Section
           id="faq"
           eyebrow="FAQ"
           title="Frequently asked questions"
-          subtitle="Answers up front help the site feel smoother and reduce repeat questions."
+          subtitle="Answers up front make the site feel smoother and reduce repeat DMs from sellers."
         >
           <div className="grid gap-5 md:grid-cols-2">
             {faqs.map((item) => (
-              <div key={item.q} className="rounded-[28px] border border-white/10 bg-white/[0.03] p-6">
+              <div key={item.q} className="rounded-[30px] border border-white/10 bg-white/[0.03] p-6">
                 <div className="text-lg font-semibold">{item.q}</div>
                 <p className="mt-3 text-sm leading-7 text-zinc-400">{item.a}</p>
               </div>
             ))}
           </div>
         </Section>
+
+        <section className="mx-auto max-w-7xl px-6 pb-20">
+          <div className="overflow-hidden rounded-[36px] border border-white/10 bg-gradient-to-r from-white/[0.04] via-amber-300/[0.08] to-white/[0.04] p-8 lg:p-10">
+            <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+              <div>
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-[11px] uppercase tracking-[0.22em] text-zinc-300">
+                  <Clock3 className="h-3.5 w-3.5 text-amber-300" />
+                  Launch-ready
+                </div>
+                <h2 className="mt-4 text-3xl font-semibold tracking-tight lg:text-5xl">
+                  This now feels like a real modern card shop site.
+                </h2>
+                <p className="mt-4 max-w-2xl text-base leading-8 text-zinc-400">
+                  Add your real logo file, real form link, and real deal screenshots and it will feel even more established.
+                </p>
+              </div>
+              <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+                <a href="#intake" className="rounded-2xl bg-gradient-to-r from-amber-300 to-amber-400 px-6 py-4 text-center text-sm font-semibold text-black transition hover:brightness-105">
+                  Open Intake
+                </a>
+                <a href="#proof" className="rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-4 text-center text-sm font-medium text-white transition hover:bg-white/[0.08]">
+                  View Recent Deals
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
-      <footer className="mt-10 border-t border-white/10 bg-black/20">
+      <footer className="border-t border-white/10 bg-black/20">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 py-10 md:grid-cols-3">
           <div>
-            <div className="text-lg font-semibold">FerexTCG</div>
-            <p className="mt-3 max-w-sm text-sm leading-7 text-zinc-400">
-              Dragon Ball Fusion World buylist intake with a more polished storefront experience.
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+                <img src="logo.png" alt="FerexTCG logo" className="h-7 w-auto object-contain" />
+              </div>
+              <div className="text-lg font-semibold">FerexTCG</div>
+            </div>
+            <p className="mt-4 max-w-sm text-sm leading-7 text-zinc-400">
+              Dragon Ball Fusion World buylist intake with a stronger, more polished card shop presence.
             </p>
           </div>
 
@@ -350,6 +443,7 @@ export default function FerexTCGModernCardShopSite() {
               <a href="#rates" className="block hover:text-white">Rates</a>
               <a href="#process" className="block hover:text-white">How it works</a>
               <a href="#intake" className="block hover:text-white">Intake</a>
+              <a href="#proof" className="block hover:text-white">Recent deals</a>
               <a href="#faq" className="block hover:text-white">FAQ</a>
             </div>
           </div>
@@ -387,7 +481,17 @@ function Badge({ text }) {
   );
 }
 
-function StoreCard({ title, subtitle }) {
+function MetricCard({ label, value, sub }) {
+  return (
+    <div className="rounded-[24px] border border-white/10 bg-white/[0.03] p-4">
+      <div className="text-xs uppercase tracking-[0.22em] text-zinc-500">{label}</div>
+      <div className="mt-2 text-xl font-semibold">{value}</div>
+      <div className="mt-1 text-sm text-zinc-500">{sub}</div>
+    </div>
+  );
+}
+
+function GlassPill({ title, subtitle }) {
   return (
     <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
       <div className="text-sm font-medium text-white">{title}</div>
@@ -418,7 +522,7 @@ function TrustPill({ icon: Icon, text }) {
 
 function RateCard({ title, subtitle, rows }) {
   return (
-    <div className="overflow-hidden rounded-[30px] border border-white/10 bg-zinc-950/90 shadow-xl shadow-black/20">
+    <div className="overflow-hidden rounded-[32px] border border-white/10 bg-zinc-950/90 shadow-xl shadow-black/20">
       <div className="border-b border-white/10 px-6 py-5">
         <h3 className="text-2xl font-semibold">{title}</h3>
         <p className="mt-2 text-sm text-zinc-400">{subtitle}</p>
@@ -437,7 +541,7 @@ function RateCard({ title, subtitle, rows }) {
 
 function ProcessCard({ icon: Icon, title, text }) {
   return (
-    <div className="rounded-[30px] border border-white/10 bg-white/[0.03] p-6">
+    <div className="rounded-[30px] border border-white/10 bg-white/[0.03] p-6 transition hover:bg-white/[0.045]">
       <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.06]">
         <Icon className="h-5 w-5 text-white" />
       </div>
